@@ -14,7 +14,10 @@
     if(isset($_POST['submit'])){
         $char=$_POST['char'];
         $char=strtoupper($char);
-        if($char=='A' || $char=='E'||$char=='I'||$char=='0'||$char=='U'){
+        if(strlen($char!=1)){
+            echo "Invalid input";
+        }
+        else if($char=='A' || $char=='E'||$char=='I'||$char=='0'||$char=='U'){
             echo "The character $char is vowel";
         }
         else{

@@ -1,3 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="p11.php" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" name="submit" value="submit">
+    </form>
+
 <?php
     if(isset($_POST['submit'])){
         $name=$_FILES['file']['name'];
@@ -9,7 +21,7 @@
         $fileActualExt=strtolower(end($fileExt));
         $allowed=array('png','pdf');
         if(in_array($fileActualExt, $allowed)){
-            if($error===0){
+            if($error==0){
                 if($size<2000000){
                     $NewfileName=uniqid('',true).".".$fileActualExt;
                     move_uploaded_file($templocation, $NewfileName);
@@ -28,3 +40,5 @@
         }
     }
 ?>
+</body>
+</html>

@@ -8,6 +8,7 @@
             <input type="number" name="number" id="number">
             <input type="submit" name="submit" value="Submit">
         </form>
+        
         <?php
         function fibonacci($n) {
             if ($n == 0) {

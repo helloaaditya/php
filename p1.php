@@ -13,12 +13,18 @@
     if(isset($_POST['submit'])){
         $num=$_POST['num'];
         $flag=0;
+        if($num<=1){
+            echo "$num is not a Prime number<br>";
+            return;
+        }
+        else {
         for ($i=2; $i<=$num/2; $i++){
             if($num%$i==0){
                 $flag=1;
                 break;
             }
         }
+    }
         if ($flag==0){
             echo"$num is Prime Number";
         }

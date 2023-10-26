@@ -27,11 +27,11 @@
         <form method="post" action="">
             <label for="number">Enter a number:</label>
             <input type="text" name="number" id="number" required>
-            <input type="submit" value="Calculate Factorial">
+            <input type="submit" value="submit" name="submit">
         </form>
 
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST['submit'])) {
             $num = intval($_POST["number"]);
 
             function factorial($n) {

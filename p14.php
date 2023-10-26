@@ -7,5 +7,5 @@ if (!isset($_SESSION['page_views'])) {
     $_SESSION['page_views']++;
 }
 
-echo "Page views: {$_SESSION['page_views']}";
+echo "Page views: ".$_SESSION['page_views'];
 ?>
